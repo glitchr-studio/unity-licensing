@@ -43,6 +43,8 @@ namespace Glitchr.Licensing.Tests
             Assert.IsNull(LicenseToken.Check(ForgeToken, ForgePublicKey, "another-game", "machine-0001", before), "another software");
             Assert.IsNull(LicenseToken.Check(ForgeToken, ForgePublicKey, "probe-game", "machine-0002", before), "another machine");
             Assert.IsNull(LicenseToken.Check(ForgeToken, ForgePublicKey, "probe-game", "machine-0001", DateTimeOffset.FromUnixTimeSeconds(1795564800)), "past valid_until");
+            Assert.IsFalse(payload.RunsOutWithin(TimeSpan.FromDays(7), before), "a month left");
+            Assert.IsTrue(payload.RunsOutWithin(TimeSpan.FromDays(7), DateTimeOffset.FromUnixTimeSeconds(1795564800 - 86400)), "a day left");
         }
 
         [Test]

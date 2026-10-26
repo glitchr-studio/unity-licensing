@@ -27,7 +27,7 @@ ActivationResult result = await client.ActivateAsync(key);
 checked out; `result.Token` is then to be stored (the game chooses where:
 `PlayerPrefs`, a file under `Application.persistentDataPath`). Activating an
 already active machine takes no new place: call it again whenever the token
-is about to run out (`result.License.ValidUntil`).
+is about to run out (`result.License.RunsOutWithin(TimeSpan.FromDays(7))`).
 
 Otherwise `result.Error` says why:
 

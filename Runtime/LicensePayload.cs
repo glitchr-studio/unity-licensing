@@ -37,6 +37,15 @@ namespace Glitchr.Licensing
 
         public DateTimeOffset ValidUntil => DateTimeOffset.FromUnixTimeSeconds(valid_until);
 
+        /// <summary>
+        /// Whether the token runs out within <paramref name="margin"/> (a week, say): time to
+        /// activate again, while online, before the game has to ask.
+        /// </summary>
+        public bool RunsOutWithin(TimeSpan margin, DateTimeOffset? now = null)
+        {
+            return (now ?? DateTimeOffset.UtcNow).Add(margin).ToUnixTimeSeconds() >= valid_until;
+        }
+
         /// <summary>Whether a release published at <paramref name="releasedAt"/> is covered by its updates.</summary>
         public bool Covers(DateTimeOffset releasedAt)
         {
