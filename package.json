@@ -1,0 +1,23 @@
+{
+  "name": "com.glitchr.licensing",
+  "version": "1.0.0",
+  "displayName": "Glitch Art Licensing",
+  "description": "Activates and releases a Glitch Art forge licence from a Unity game or application, and checks the signed token offline (Ed25519, managed code).",
+  "unity": "2021.3",
+  "documentationUrl": "https://github.com/glitchr-studio/unity-licensing#readme",
+  "changelogUrl": "https://github.com/glitchr-studio/unity-licensing/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/glitchr-studio/unity-licensing/blob/main/LICENSE.md",
+  "keywords": [
+    "licensing",
+    "license",
+    "activation",
+    "ed25519",
+    "glitchr"
+  ],
+  "author": {
+    "name": "Marco Meyer",
+    "email": "marco.meyer@glitchr.io",
+    "url": "https://glitchr.io"
+  },
+  "license": "MIT"
+}
