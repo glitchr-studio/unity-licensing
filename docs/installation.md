@@ -11,7 +11,7 @@ Package Manager reads as a scoped registry. Add it to the project's
   {
     "name": "Glitch Art",
     "url": "https://glitchr.io/upm",
-    "scopes": ["com.glitchr"]
+    "scopes": ["io.glitchr"]
   }
 ]
 ```
@@ -20,7 +20,7 @@ Then **Window > Package Manager**, **My Registries**: the free packages are
 listed; select one and **Install**. Or add it to `dependencies` by hand:
 
 ```json
-"com.glitchr.licensing": "1.0.0"
+"io.glitchr.licensing": "1.0.0"
 ```
 
 A new version published on the forge shows up as an update in the same
@@ -45,5 +45,5 @@ whose licence does not cover it, refused too (403).
 ## From Git
 
 ```json
-"com.glitchr.licensing": "https://github.com/glitchr-studio/unity-licensing.git#1.0.0"
+"io.glitchr.licensing": "https://github.com/glitchr-studio/unity-licensing.git#1.0.0"
 ```

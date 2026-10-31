@@ -21,11 +21,11 @@ The package is served by the forge's Unity registry. In the project's
     {
       "name": "Glitch Art",
       "url": "https://glitchr.io/upm",
-      "scopes": ["com.glitchr"]
+      "scopes": ["io.glitchr"]
     }
   ],
   "dependencies": {
-    "com.glitchr.licensing": "1.0.0"
+    "io.glitchr.licensing": "1.0.0"
   }
 }
 ```
@@ -64,7 +64,7 @@ Ed25519 verification against RFC 8032's vectors and a token signed as the
 forge signs it. Add the package to the project's `testables` to see them:
 
 ```json
-"testables": ["com.glitchr.licensing"]
+"testables": ["io.glitchr.licensing"]
 ```
 
 ## Licence
